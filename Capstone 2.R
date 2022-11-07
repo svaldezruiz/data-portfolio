@@ -357,8 +357,3 @@ members<-clean_data%>% filter(member_casual == 'member')%>%group_by(weekday,ride
 
 ggplot(data= members, mapping= aes(x= weekday, y=n, fill =rideable_type)) + geom_bar(stat = 'identity')+ labs(title="Member: Biketype Weekly Use", x="Day of the Week", y= "Count of Rides", fill= "Bike Type")+ scale_y_continuous(labels = function(x) format(x, scientific = FALSE,big.mark = ",", decimal.mark = "."))
 
-install.packages("tinytex")
-rmarkdown::render("Capstone 2.R")
-
-xfun::broken_packages(reinstall = TRUE)
-library(rmarkdown)
